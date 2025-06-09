@@ -28,6 +28,8 @@ const SnakeGame: React.FC = () => {
   const isGameStartedRef = useRef<boolean>(false);
   const directionRef = useRef<string>('right');
   const foodEatenRef = useRef<boolean>(false);
+
+  
     function playAudio(audio:any){
   new Audio(audio).play();
     }
@@ -175,10 +177,9 @@ const SnakeGame: React.FC = () => {
           playAudio(gameOver)
       
 
-setTimeout(() => {
-    
+         setTimeout(() => {
     alert('Collided with self! Game Over!');
-}, 500);
+         }, 500);
           break;
         }
       }
